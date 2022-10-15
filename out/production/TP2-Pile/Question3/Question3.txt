@@ -1,0 +1,19 @@
+1) Quelle est la différence entre cette interface et les classes discutées dans la question
+précédente?
+--> les méthodes y sont seulement déclarées.
+--> Une classe qui implémente une interface doit obligatoirement implémenter chacune des méthodes déclarées dans l’interface
+
+2) Quels sont les avantages et les inconvénients de la solution offerte par l’interface ?
+--> Avantage :
+    Elle accepte des types d'objets hétérogène.
+    Elle permet de définir les méthodes en amont et rends leur définition obligatoire dans la classe qui l'implémente.
+
+--> Inconvénient :
+    Elle force le type à Objet pour la méthode Empiler par exemple. Si on veut être plus spécifique, c'est impossible.
+    Elle n'est donc pas assez générique.
+
+3) Modifier l'interface pour qu'elle soit vraiment générique.
+--> Il faut remplacer le type "Object" par un terme générique. Pour un type, <T>.
+
+4) Modifier et tester votre classe Pile pour qu'elle utilise l’interface IPile.
+--> Voir classe

@@ -1,0 +1,17 @@
+1) Quelle est la solution a mettre en œuvre si une pile peut contenir des objets de type hétérogene ?
+En ajoutant un type <Object> sur notre attribut ArrayList (ou ne rien mettre) et en changeant le type de retour de nos méthodes à Object.
+
+2) Quelle est la solution a mettre en œuvre si une pile ne peut contenir que des objets du même
+type ? Expliquer les modifications qui devraient alors être apportées au code précédent.
+
+Exemple pour un l'objet "Integer" :
+Il faut ajouter un type à notre ArrayList<Integer>
+--> private ArrayList<Integer> listeInteger;
+Il faut changer le type de retour de nos méthodes && de nos paramètres :
+--> public Integer sommet()
+--> public void empiler(Integer lastIn)
+--> public Integer depiler() {
+            Integer ret = sommet();
+            this.listeInteger.remove(sommet());
+            return ret;
+        }
